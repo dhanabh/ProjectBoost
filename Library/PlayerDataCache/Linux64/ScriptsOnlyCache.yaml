@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CollisionHandler
     - Movement
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -34,6 +35,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -41,7 +46,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2078}
+      Script: {instanceID: 2084}
+    - Class: 114
+      Script: {instanceID: 15814}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -481,7 +488,13 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionHandler
   platform: 24
   scenePathNames:
   - Assets/Scenes/SandBox.unity
-  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Mover01.x86_64
+  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v2.x86_64
