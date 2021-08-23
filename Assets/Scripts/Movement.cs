@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -80,8 +81,9 @@ public class Movement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Z)|| transform.position[1]<= -45){
 
-           transform.rotation=Quaternion.Euler(startingRotation);
-           transform.position = startingPosition;
+           //transform.rotation=Quaternion.Euler(startingRotation);
+           //transform.position = startingPosition;
+           SceneManager.LoadScene(0);
 
         }
 

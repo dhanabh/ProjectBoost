@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -15,13 +16,20 @@ public class CollisionHandler : MonoBehaviour
                                 Debug.Log("Mission accoplished successfully!");
                                 break;
             case "Base":
-                                Debug.Log("Racket has landed on the base!");
+                                Debug.Log("Rocket has landed on the base!");
+                                Respawn();
                                 break;
             case "Obstacle":
                                 Debug.Log("Rocket hit the obstacle!");
                                 break;
 
         }
+
+    }
+
+    void Respawn(){
+
+        SceneManager.LoadScene(0);
 
     }
 }
