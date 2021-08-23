@@ -310,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 698993961795778972, guid: 69a724a983f2e0301b20df90dcd36d97, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 698993961795778976, guid: 69a724a983f2e0301b20df90dcd36d97, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -375,6 +379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandingPad
       objectReference: {fileID: 0}
+    - target: {fileID: 3722997334549754690, guid: 18c1e699d45fa3638a6f9aa3ce8924ed, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 3722997334549754694, guid: 18c1e699d45fa3638a6f9aa3ce8924ed, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -431,6 +439,10 @@ PrefabInstance:
     - target: {fileID: 3912796579593793713, guid: 009bf02f56410aa45aaedf7fc0dc4428, type: 3}
       propertyPath: m_Name
       value: LaunchPad
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912796579593793713, guid: 009bf02f56410aa45aaedf7fc0dc4428, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 3912796579593793717, guid: 009bf02f56410aa45aaedf7fc0dc4428, type: 3}
       propertyPath: m_RootOrder
@@ -542,14 +554,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5030451334908612003, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
-      propertyPath: m_Drag
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5030451334908612003, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     - target: {fileID: 5030451334908612005, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
       propertyPath: m_RootOrder
       value: 5
