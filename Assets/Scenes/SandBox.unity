@@ -299,6 +299,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1152515759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5030451334908612025, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
+  m_PrefabInstance: {fileID: 5030451335456733143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1152515767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152515759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84469d7c3a3b8b2b59cceaf2eee9dde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &698993963564498050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 698993961795778976, guid: 69a724a983f2e0301b20df90dcd36d97, type: 3}
       propertyPath: m_LocalScale.y
-      value: 22.028
+      value: 38.000603
       objectReference: {fileID: 0}
     - target: {fileID: 698993961795778976, guid: 69a724a983f2e0301b20df90dcd36d97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -332,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 698993961795778976, guid: 69a724a983f2e0301b20df90dcd36d97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.1859
+      value: 21.0397
       objectReference: {fileID: 0}
     - target: {fileID: 698993961795778976, guid: 69a724a983f2e0301b20df90dcd36d97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -545,6 +562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Base
       objectReference: {fileID: 0}
+    - target: {fileID: 4274871510870251528, guid: 17a6a403ddeafab39b7410c1eb30f0ee, type: 3}
+      propertyPath: m_TagString
+      value: Base
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17a6a403ddeafab39b7410c1eb30f0ee, type: 3}
 --- !u!1001 &5030451335456733143
@@ -554,6 +575,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1152515760, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ed02965246366d76182a4ca18832ae92, type: 3}
     - target: {fileID: 5030451334908612005, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
       propertyPath: m_RootOrder
       value: 5

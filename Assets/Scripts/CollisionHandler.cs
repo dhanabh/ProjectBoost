@@ -9,11 +9,13 @@ public class CollisionHandler : MonoBehaviour
         
         switch(other.gameObject.tag){
 
+        
+
             case "Friendly":
                                 Debug.Log("Rocket is on the launchpad!");
                                 break;
             case "Finish":
-                                Debug.Log("Mission accoplished successfully!");
+                                Debug.Log("Mission accomplished successfully!");
                                 break;
             case "Base":
                                 Debug.Log("Rocket has landed on the base!");
@@ -29,7 +31,10 @@ public class CollisionHandler : MonoBehaviour
 
     void Respawn(){
 
-        SceneManager.LoadScene(0);
+
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(sceneIndex);
 
     }
 }
