@@ -16,6 +16,7 @@ public class CollisionHandler : MonoBehaviour
                                 break;
             case "Finish":
                                 Debug.Log("Mission accomplished successfully!");
+                                NextLevel();
                                 break;
             case "Base":
                                 Debug.Log("Rocket has landed on the base!");
@@ -28,7 +29,22 @@ public class CollisionHandler : MonoBehaviour
         }
 
     }
+    void NextLevel(){
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        if(!(currentLevel == SceneManager.sceneCount)){
 
+            SceneManager.LoadScene(currentLevel+1);
+
+        }else{
+
+            SceneManager.LoadScene(0);
+        }
+
+
+
+
+
+    }
     void Respawn(){
 
 
