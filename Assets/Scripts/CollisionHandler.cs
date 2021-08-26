@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+
+    [SerializeField] float respawnDelay = 10.0f;
     private void OnCollisionEnter(Collision other) {
         
         switch(other.gameObject.tag){
@@ -20,13 +22,30 @@ public class CollisionHandler : MonoBehaviour
                                 break;
             case "Base":
                                 Debug.Log("Rocket has landed on the base!");
-                                Respawn();
+                                OnCrashReset();
+                                //Respawn();
                                 break;
             case "Obstacle":
                                 Debug.Log("Rocket hit the obstacle!");
+                                OnCrashReset();
                                 break;
 
         }
+
+    }
+    
+    void OnCrashReset(){
+
+
+     bool movEnabled =    GetComponent<Movement>().enabled;
+        
+        movEnabled = false;
+
+        Invoke("Respawn",respawnDelay);
+    
+        //movEnabled = true;
+
+
 
     }
     void NextLevel(){
