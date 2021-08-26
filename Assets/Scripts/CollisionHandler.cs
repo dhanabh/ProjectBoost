@@ -18,30 +18,40 @@ public class CollisionHandler : MonoBehaviour
                                 break;
             case "Finish":
                                 Debug.Log("Mission accomplished successfully!");
-                                NextLevel();
+                                OnRestartOrLevelChange("NextLevel");;
                                 break;
             case "Base":
                                 Debug.Log("Rocket has landed on the base!");
-                                OnCrashReset();
+                                OnRestartOrLevelChange("Respawn");
                                 //Respawn();
                                 break;
             case "Obstacle":
                                 Debug.Log("Rocket hit the obstacle!");
-                                OnCrashReset();
+                                OnRestartOrLevelChange("Respawn");
                                 break;
 
         }
 
     }
+
+    void OnNextLevel(){
+
+        bool movEnabled =    GetComponent<Movement>().enabled;
+        
+        movEnabled = false;
+
+        Invoke("NextLevel",respawnDelay);
+
+    }
     
-    void OnCrashReset(){
+    void OnRestartOrLevelChange(string functionName){
 
 
      bool movEnabled =    GetComponent<Movement>().enabled;
         
         movEnabled = false;
 
-        Invoke("Respawn",respawnDelay);
+        Invoke(functionName,respawnDelay);
     
         //movEnabled = true;
 

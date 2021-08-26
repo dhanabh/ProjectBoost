@@ -355,7 +355,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 3720dfe2c91a797031d62a50dfea0203
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CollisionHandler
@@ -543,4 +543,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/FlyUp.unity
   - Assets/Scenes/FlyDown.unity
-  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v3.1.x86_64
+  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v3.2.x86_64
