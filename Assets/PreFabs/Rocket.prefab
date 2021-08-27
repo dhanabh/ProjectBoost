@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c024652e5a09c9e05951e5a11b0b4a67, type: 2}
+  - {fileID: 2100000, guid: e699b56497c3cc3818c843316935ffc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 500
   rotationSpeed: 150
+  sndThrust: {fileID: 8300000, guid: c511033a2c38a9232aebf982375f466d, type: 3}
 --- !u!54 &5030451334908612003
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,7 +140,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c511033a2c38a9232aebf982375f466d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -237,3 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84469d7c3a3b8b2b59cceaf2eee9dde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnDelay: 2
+  crash: {fileID: 8300000, guid: 0504cf513ac2d15c9bba07602a757c4a, type: 3}
+  success: {fileID: 8300000, guid: aad7ec3544b3a9f7dae703cfe8c54d26, type: 3}

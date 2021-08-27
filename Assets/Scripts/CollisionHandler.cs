@@ -3,11 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
 public class CollisionHandler : MonoBehaviour
 {
 
-    [SerializeField] float respawnDelay = 10.0f;
+    [SerializeField] float respawnDelay = 2.0f;
+    [SerializeField] AudioClip  crash;
+    [SerializeField] AudioClip  success;
+    AudioSource audioSource;
+
+    bool movEnabled ;
+     void Start() {
+         audioSource = GetComponent<AudioSource>();
+        movEnabled =    GetComponent<Movement>().enabled;
+        
+    }
     private void OnCollisionEnter(Collision other) {
+
+       
         
         switch(other.gameObject.tag){
 
@@ -17,40 +30,35 @@ public class CollisionHandler : MonoBehaviour
                                 Debug.Log("Rocket is on the launchpad!");
                                 break;
             case "Finish":
-                                Debug.Log("Mission accomplished successfully!");
-                                OnRestartOrLevelChange("NextLevel");;
+                               // Debug.Log("Mission accomplished successfully!");
+                                //audioSource.Stop();
+                                //audioSource.PlayOneShot(success);
+                                OnRestartOrLevelChange("NextLevel",success);
                                 break;
             case "Base":
                                 Debug.Log("Rocket has landed on the base!");
-                                OnRestartOrLevelChange("Respawn");
+                                OnRestartOrLevelChange("Respawn",crash);
                                 //Respawn();
                                 break;
             case "Obstacle":
                                 Debug.Log("Rocket hit the obstacle!");
-                                OnRestartOrLevelChange("Respawn");
+                                //audioSource.Stop();
+                                //audioSource.PlayOneShot(success);
+                                OnRestartOrLevelChange("Respawn",crash);
                                 break;
 
         }
 
     }
 
-    void OnNextLevel(){
-
-        bool movEnabled =    GetComponent<Movement>().enabled;
-        
-        movEnabled = false;
-
-        Invoke("NextLevel",respawnDelay);
-
-    }
     
-    void OnRestartOrLevelChange(string functionName){
+    
+    void OnRestartOrLevelChange(string functionName,AudioClip clip){
 
 
-     bool movEnabled =    GetComponent<Movement>().enabled;
-        
+     
         movEnabled = false;
-
+        audioSource.PlayOneShot(clip);
         Invoke(functionName,respawnDelay);
     
         //movEnabled = true;
@@ -59,6 +67,10 @@ public class CollisionHandler : MonoBehaviour
 
     }
     void NextLevel(){
+
+        
+
+        
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
         if(!(currentLevel == SceneManager.sceneCountInBuildSettings -1)){
 
@@ -75,7 +87,7 @@ public class CollisionHandler : MonoBehaviour
 
     }
     void Respawn(){
-
+        
 
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
 

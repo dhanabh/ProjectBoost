@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+[RequireComponent(typeof(AudioSource))]
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     AudioSource audioSource;
    [SerializeField] float mainThrust = 350f;
    [SerializeField] float rotationSpeed = 150f;
+
+   [SerializeField] AudioClip sndThrust;
    Vector3 startingPosition ;
    Vector3 startingRotation;
 
@@ -43,7 +45,7 @@ public class Movement : MonoBehaviour
 
             if(!audioSource.isPlaying){
 
-                audioSource.Play();
+                audioSource.PlayOneShot(sndThrust);
 
             }
 

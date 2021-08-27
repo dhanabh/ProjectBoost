@@ -558,6 +558,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1152515767, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
+      propertyPath: sndObstacle
+      value: 
+      objectReference: {fileID: 8300000, guid: 0504cf513ac2d15c9bba07602a757c4a, type: 3}
+    - target: {fileID: 1152515767, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
+      propertyPath: respawnDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152515767, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
+      propertyPath: sndFinishLevel
+      value: 
+      objectReference: {fileID: 8300000, guid: aad7ec3544b3a9f7dae703cfe8c54d26, type: 3}
+    - target: {fileID: 5030451334908612004, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
+      propertyPath: sndThrust
+      value: 
+      objectReference: {fileID: 8300000, guid: c511033a2c38a9232aebf982375f466d, type: 3}
     - target: {fileID: 5030451334908612005, guid: a4c39f2a2a779ca09910351fe736e76e, type: 3}
       propertyPath: m_RootOrder
       value: 5
