@@ -12,6 +12,8 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip  success;
     AudioSource audioSource;
 
+    bool isTransitioning = false;
+
     bool movEnabled ;
      void Start() {
          audioSource = GetComponent<AudioSource>();
@@ -29,11 +31,10 @@ public class CollisionHandler : MonoBehaviour
             case "Friendly":
                                 Debug.Log("Rocket is on the launchpad!");
                                 break;
-            case "Finish":
-                               // Debug.Log("Mission accomplished successfully!");
-                                //audioSource.Stop();
-                                //audioSource.PlayOneShot(success);
+            case "Finish":      
                                 OnRestartOrLevelChange("NextLevel",success);
+                               
+                                
                                 break;
             case "Base":
                                 Debug.Log("Rocket has landed on the base!");
@@ -58,7 +59,11 @@ public class CollisionHandler : MonoBehaviour
 
      
         movEnabled = false;
-        audioSource.PlayOneShot(clip);
+        
+        if(!isTransitioning){
+            audioSource.PlayOneShot(clip);
+            isTransitioning = true;
+        }
         Invoke(functionName,respawnDelay);
     
         //movEnabled = true;
