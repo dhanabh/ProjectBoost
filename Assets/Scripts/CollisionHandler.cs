@@ -23,7 +23,7 @@ public class CollisionHandler : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
 
        
-        
+        if(isTransitioning)return;
         switch(other.gameObject.tag){
 
         
@@ -58,12 +58,13 @@ public class CollisionHandler : MonoBehaviour
 
 
      
-        movEnabled = false;
+            movEnabled = false;
         
-        if(!isTransitioning){
-            audioSource.PlayOneShot(clip);
             isTransitioning = true;
-        }
+            audioSource.Stop();
+            audioSource.PlayOneShot(clip);
+            
+        
         Invoke(functionName,respawnDelay);
     
         //movEnabled = true;
