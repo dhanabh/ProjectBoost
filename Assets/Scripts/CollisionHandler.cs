@@ -10,6 +10,10 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float respawnDelay = 2.0f;
     [SerializeField] AudioClip  crash;
     [SerializeField] AudioClip  success;
+
+    [SerializeField] ParticleSystem  crashParticles;
+    [SerializeField] ParticleSystem  successParticles;
+
     AudioSource audioSource;
 
     bool isTransitioning = false;
@@ -32,20 +36,20 @@ public class CollisionHandler : MonoBehaviour
                                 Debug.Log("Rocket is on the launchpad!");
                                 break;
             case "Finish":      
-                                OnRestartOrLevelChange("NextLevel",success);
+                                OnRestartOrLevelChange("NextLevel",success,successParticles);
                                
                                 
                                 break;
             case "Base":
                                 Debug.Log("Rocket has landed on the base!");
-                                OnRestartOrLevelChange("Respawn",crash);
+                                OnRestartOrLevelChange("Respawn",crash,crashParticles);
                                 //Respawn();
                                 break;
             case "Obstacle":
                                 Debug.Log("Rocket hit the obstacle!");
                                 //audioSource.Stop();
                                 //audioSource.PlayOneShot(success);
-                                OnRestartOrLevelChange("Respawn",crash);
+                                OnRestartOrLevelChange("Respawn",crash,crashParticles);
                                 break;
 
         }
@@ -54,7 +58,7 @@ public class CollisionHandler : MonoBehaviour
 
     
     
-    void OnRestartOrLevelChange(string functionName,AudioClip clip){
+    void OnRestartOrLevelChange(string functionName,AudioClip clip, ParticleSystem partSys){
 
 
      
@@ -63,6 +67,7 @@ public class CollisionHandler : MonoBehaviour
             isTransitioning = true;
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
+            partSys.Play();
             
         
         Invoke(functionName,respawnDelay);

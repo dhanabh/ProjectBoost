@@ -55,6 +55,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     Assets/Scenes/FlyUp.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -99,6 +103,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -355,7 +363,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: a2e9c4adec002b8a50edc59c7bda13fc
+      Hash: 4a135a857e85df053b6511c44e2aa180
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CollisionHandler
@@ -543,4 +551,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/FlyUp.unity
   - Assets/Scenes/FlyDown.unity
-  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v4.4.x86_64
+  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v5.0.x86_64
