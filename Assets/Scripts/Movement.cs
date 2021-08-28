@@ -85,7 +85,8 @@ public class Movement : MonoBehaviour
 
            //transform.rotation=Quaternion.Euler(startingRotation);
            //transform.position = startingPosition;
-           SceneManager.LoadScene(0);
+           int currentScene = SceneManager.GetActiveScene().buildIndex;
+           SceneManager.LoadScene(currentScene);
 
         }
 
