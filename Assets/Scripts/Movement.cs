@@ -13,6 +13,10 @@ public class Movement : MonoBehaviour
    [SerializeField] float rotationSpeed = 150f;
 
    [SerializeField] AudioClip sndThrust;
+   [SerializeField] ParticleSystem rocketThrust;
+   [SerializeField] ParticleSystem rightThrust;
+
+   [SerializeField] ParticleSystem leftThrust;
    Vector3 startingPosition ;
    Vector3 startingRotation;
 
@@ -43,6 +47,7 @@ public class Movement : MonoBehaviour
 
             rb.AddRelativeForce(Vector3.up*Time.deltaTime* mainThrust);
 
+            rocketThrust.Play();
             if(!audioSource.isPlaying){
 
                 audioSource.PlayOneShot(sndThrust);
@@ -63,11 +68,13 @@ public class Movement : MonoBehaviour
         if(Input.GetKey(KeyCode.A) && !(Input.GetKey(KeyCode.D)))
         {
             Debug.Log("Rotate Left");
+            leftThrust.Play();
             ApplyRotation(rotationSpeed);
         }
         if (Input.GetKey(KeyCode.D) && !(Input.GetKey(KeyCode.A))){
             
             Debug.Log("Rotate Right");
+            rightThrust.Play();
             ApplyRotation(-rotationSpeed);
         }
 
