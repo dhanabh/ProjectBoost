@@ -207,7 +207,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: cf9368b417b55710499eaf529c0dd406
+      Hash: 8efe4ef67efc6c736c8f8573a57ad5f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -551,4 +551,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/FlyUp.unity
   - Assets/Scenes/FlyDown.unity
-  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v5.1.x86_64
+  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v5.2.x86_64

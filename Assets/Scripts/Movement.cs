@@ -13,10 +13,10 @@ public class Movement : MonoBehaviour
    [SerializeField] float rotationSpeed = 150f;
 
    [SerializeField] AudioClip sndThrust;
-   [SerializeField] ParticleSystem rocketThrust;
-   [SerializeField] ParticleSystem rightThrust;
+   [SerializeField] ParticleSystem rocketThrustParticles;
+   [SerializeField] ParticleSystem rightThrustParticles;
 
-   [SerializeField] ParticleSystem leftThrust;
+   [SerializeField] ParticleSystem leftThrustParticles;
    Vector3 startingPosition ;
    Vector3 startingRotation;
 
@@ -47,19 +47,32 @@ public class Movement : MonoBehaviour
 
             rb.AddRelativeForce(Vector3.up*Time.deltaTime* mainThrust);
 
-            rocketThrust.Play();
+            if(!rocketThrustParticles.isPlaying){
+
+                rocketThrustParticles.Play();
+
+            }
+            
+
+            
             if(!audioSource.isPlaying){
 
                 audioSource.PlayOneShot(sndThrust);
 
             }
 
+        
+            
+
+            
+
+
         }
         else{
-
+            rocketThrustParticles.Stop();
             audioSource.Stop();
-        }
-        
+
+            }
 
     }
 
@@ -68,14 +81,23 @@ public class Movement : MonoBehaviour
         if(Input.GetKey(KeyCode.A) && !(Input.GetKey(KeyCode.D)))
         {
             Debug.Log("Rotate Left");
-            leftThrust.Play();
+            if(!rightThrustParticles.isPlaying){
+            rightThrustParticles.Play();
+            }
             ApplyRotation(rotationSpeed);
         }
-        if (Input.GetKey(KeyCode.D) && !(Input.GetKey(KeyCode.A))){
+        else if (Input.GetKey(KeyCode.D) && !(Input.GetKey(KeyCode.A))){
             
             Debug.Log("Rotate Right");
-            rightThrust.Play();
+            if(!leftThrustParticles.isPlaying){
+            leftThrustParticles.Play();
+            
+            }
             ApplyRotation(-rotationSpeed);
+        }
+        else{
+            leftThrustParticles.Stop();
+            rightThrustParticles.Stop();
         }
 
     }
