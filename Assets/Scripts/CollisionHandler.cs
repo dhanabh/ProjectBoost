@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,15 +20,37 @@ public class CollisionHandler : MonoBehaviour
     bool isTransitioning = false;
 
     bool movEnabled ;
+    bool collisionDisabled = false;
      void Start() {
          audioSource = GetComponent<AudioSource>();
         movEnabled =    GetComponent<Movement>().enabled;
         
     }
+
+    void Update() {
+        
+        RespondToDebugKeys();
+
+    }
+
+    private void RespondToDebugKeys()
+    {
+        if(Input.GetKeyDown(KeyCode.C)){
+
+            collisionDisabled = !collisionDisabled;
+            Debug.Log("Collison Mode: " + collisionDisabled);
+        }
+        else if(Input.GetKey(KeyCode.L)){
+            
+            NextLevel();
+
+        }
+    }
+
     private void OnCollisionEnter(Collision other) {
 
        
-        if(isTransitioning)return;
+        if(isTransitioning || collisionDisabled)return;
         switch(other.gameObject.tag){
 
         
@@ -77,7 +100,7 @@ public class CollisionHandler : MonoBehaviour
 
 
     }
-    void NextLevel(){
+   public  void NextLevel(){
 
         
 

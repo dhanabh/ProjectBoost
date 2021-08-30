@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,9 @@ public class Movement : MonoBehaviour
    [SerializeField] ParticleSystem leftThrustParticles;
    Vector3 startingPosition ;
    Vector3 startingRotation;
-
+   
+    
+   
 
     void Start()
     {
@@ -27,6 +30,7 @@ public class Movement : MonoBehaviour
         startingRotation = new Vector3(0,0,0);
 
         rb  = GetComponent<Rigidbody>();
+        
         audioSource = GetComponent<AudioSource>() ;
     }
 
@@ -36,7 +40,11 @@ public class Movement : MonoBehaviour
         ProcesThrust();
         ProcessRotation();
         GameReset();
+       
+        
     }
+
+   
 
     void ProcesThrust(){
 
@@ -148,4 +156,6 @@ public class Movement : MonoBehaviour
 
 
     }
+
+    
 }
