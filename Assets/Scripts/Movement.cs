@@ -50,12 +50,13 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            rocketThrustParticles.Stop();
-            audioSource.Stop();
+            StopForwardThrust();
 
         }
 
     }
+
+    
 
     private void StartForwardThrust()
     {
@@ -78,29 +79,40 @@ public class Movement : MonoBehaviour
         }
 
     }
-
+    private void StopForwardThrust()
+    {
+        rocketThrustParticles.Stop();
+        audioSource.Stop();
+    }
     void ProcessRotation(){
 
         if(Input.GetKey(KeyCode.A) && !(Input.GetKey(KeyCode.D)))
         {
             Debug.Log("Rotate Left");
-            StartRightThrust();
+            RotateLeft();
         }
         else if (Input.GetKey(KeyCode.D) && !(Input.GetKey(KeyCode.A)))
         {
 
             Debug.Log("Rotate Right");
-            StartLeftThrust();
+            RotateRight();
         }
         else
         {
-            leftThrustParticles.Stop();
-            rightThrustParticles.Stop();
+            StopRotation();
         }
 
     }
 
-    private void StartLeftThrust()
+        private void RotateLeft()
+    {
+        if (!rightThrustParticles.isPlaying)
+        {
+            rightThrustParticles.Play();
+        }
+        ApplyRotation(rotationSpeed);
+    }
+    private void RotateRight()
     {
         if (!leftThrustParticles.isPlaying)
         {
@@ -110,13 +122,10 @@ public class Movement : MonoBehaviour
         ApplyRotation(-rotationSpeed);
     }
 
-    private void StartRightThrust()
+    private void StopRotation()
     {
-        if (!rightThrustParticles.isPlaying)
-        {
-            rightThrustParticles.Play();
-        }
-        ApplyRotation(rotationSpeed);
+        leftThrustParticles.Stop();
+        rightThrustParticles.Stop();
     }
 
     private void ApplyRotation(float rotationThisFrame)
