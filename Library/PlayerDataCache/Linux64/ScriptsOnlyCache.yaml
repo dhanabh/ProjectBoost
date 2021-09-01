@@ -549,6 +549,6 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   platform: 24
   scenePathNames:
-  - Assets/Scenes/FlyUp.unity
   - Assets/Scenes/FlyDown.unity
-  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v5.5.x86_64
+  - Assets/Scenes/FlyUp.unity
+  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v6.0.x86_64
