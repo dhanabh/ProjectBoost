@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637652315000000000
-    m_Hash: 3567413824
+      ticks: 637662768460000000
+    m_Hash: 1640079233
   m_LockFileStatus:
     m_FilePath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637652315000000000
-    m_Hash: 367063376
+      ticks: 637662768460000000
+    m_Hash: 2794618605
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -322,12 +322,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
         revision: c7cd4c6319806423b3d918b3e9599244e3993d41
         path: 
-    - packageId: com.unity.ide.vscode@1.2.3
+    - packageId: com.unity.ide.vscode@1.2.4
       testable: 0
       isDirectDependency: 1
-      version: 1.2.3
+      version: 1.2.4
       source: 1
-      resolvedPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/PackageCache/com.unity.ide.vscode@1.2.3
+      resolvedPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/PackageCache/com.unity.ide.vscode@1.2.4
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -355,6 +355,7 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
+        - 1.2.4
         compatible:
         - 1.0.2
         - 1.0.3
@@ -367,7 +368,8 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
-        verified: 1.2.3
+        - 1.2.4
+        verified: 1.2.4
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -383,13 +385,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637394922300000000
+      datePublishedTicks: 637660806170000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-        revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+        url: git+https://github.com/Unity-Technologies/com.unity.ide.vscode.git
+        revision: 1f4f605d5c988cb610c372b5c5216c46cc8f5d30
         path: 
     - packageId: com.unity.test-framework@1.1.26
       testable: 0

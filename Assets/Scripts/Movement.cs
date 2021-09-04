@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(AudioSource))]
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    
     Rigidbody rb  ;
     AudioSource audioSource;
    [SerializeField] float mainThrust = 350f;
@@ -26,6 +27,8 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Here we go again!");
+        
         startingPosition = new Vector3(-40f,10.5f,0f);
         startingRotation = new Vector3(0,0,0);
 
@@ -48,6 +51,7 @@ public class Movement : MonoBehaviour
 
     void ProcesThrust(){
 
+        
         if(Input.GetKey(KeyCode.Space))
         {
             //Debug.Log("Move Forward");
@@ -61,6 +65,7 @@ public class Movement : MonoBehaviour
             StopForwardThrust();
 
         }
+       
 
     }
 
@@ -109,6 +114,7 @@ public class Movement : MonoBehaviour
         {
             StopRotation();
         }
+        
 
     }
 

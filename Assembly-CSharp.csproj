@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Movement.cs" />
-     <Compile Include="Assets\Scripts\CollisionHandler.cs" />
+     <Compile Include="Assets/Scripts/Movement.cs" />
+     <Compile Include="Assets/Scripts/CollisionHandler.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/bdm/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -635,23 +635,25 @@
     <Reference Include="Unity.Toolchain.Linux-x86_64">
         <HintPath>/home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>/home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>/home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>/home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>/home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.SysrootPackage.Editor">
         <HintPath>/home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{f03de77f-f09c-3e3d-6936-8bfb41a9d1bf}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{038a81f2-10a5-145d-4875-f1d729277850}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
