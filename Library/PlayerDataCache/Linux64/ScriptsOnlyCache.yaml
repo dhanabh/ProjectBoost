@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CollisionHandler
     - Movement
+    - Mover
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -49,6 +50,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2084}
     - Class: 114
       Script: {instanceID: 2968}
+    - Class: 114
+      Script: {instanceID: 3744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -98,6 +101,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2084}
     - Class: 114
       Script: {instanceID: 2968}
+    - Class: 114
+      Script: {instanceID: 3744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -507,6 +512,12 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: e8c27ce29c7886d064bea93fd1d4f366
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Mover
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -551,4 +562,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/FlyUp.unity
   - Assets/Scenes/FlyDown.unity
-  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v6.2.x86_64
+  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v6.3.x86_64
