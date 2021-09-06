@@ -10,5 +10,14 @@ EditorBuildSettings:
     guid: be9036d45b5d641ec94a78a651beecf7
   - enabled: 1
     path: Assets/Scenes/FlyDown.unity
+    guid: 93420bf76f147e1a0aa27f68f0d2117b
+  - enabled: 1
+    path: Assets/Scenes/FlyBetween.unity
+    guid: 3fc6c8a12fa6af148b02e810c3b8096c
+  - enabled: 1
+    path: Assets/Scenes/FlyRight.unity
+    guid: cf59cb71b011be0139c6680a6a466ddd
+  - enabled: 1
+    path: Assets/Scenes/FlyLeft.unity
     guid: fd0182de30d11e32ebc32c731ce11ffc
   m_configObjects: {}

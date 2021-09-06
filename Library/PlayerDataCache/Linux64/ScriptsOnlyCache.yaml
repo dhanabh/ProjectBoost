@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CollisionHandler
     - Movement
     - Mover
+    - QuitGame
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -11,6 +12,57 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
   sceneClasses:
+    Assets/Scenes/FlyBetween.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 2084}
+    - Class: 114
+      Script: {instanceID: 2968}
+    - Class: 114
+      Script: {instanceID: 24056}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     Assets/Scenes/FlyDown.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -51,7 +103,113 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2968}
     - Class: 114
+      Script: {instanceID: 24056}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    Assets/Scenes/FlyLeft.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 2084}
+    - Class: 114
+      Script: {instanceID: 2968}
+    - Class: 114
       Script: {instanceID: 3744}
+    - Class: 114
+      Script: {instanceID: 24056}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    Assets/Scenes/FlyRight.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 2084}
+    - Class: 114
+      Script: {instanceID: 2968}
+    - Class: 114
+      Script: {instanceID: 3744}
+    - Class: 114
+      Script: {instanceID: 24056}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -102,7 +260,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2968}
     - Class: 114
-      Script: {instanceID: 3744}
+      Script: {instanceID: 24056}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -558,8 +716,17 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitGame
   platform: 24
   scenePathNames:
   - Assets/Scenes/FlyUp.unity
   - Assets/Scenes/FlyDown.unity
-  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v6.3.x86_64
+  - Assets/Scenes/FlyBetween.unity
+  - Assets/Scenes/FlyRight.unity
+  - Assets/Scenes/FlyLeft.unity
+  playerPath: /home/bdm/Documents/unity/UnityTutorial/ProjectBoost/Bin/Boost.x86_64_v6.4.x86_64
